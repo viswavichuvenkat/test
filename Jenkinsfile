@@ -28,7 +28,7 @@ pipeline {
         stage('docker deploy'){
             steps{
                 sh 'docker container rm -f devops'
-                sh 'docker run --name devops -itd -p 9999:9999 9894851315/devops:${BUILD_NUMBER}'
+                sh 'docker run --name devops -itd -p 9000:9000 9894851315/devops:${BUILD_NUMBER}'
                 echo 'docker container is created'
                 echo 'docker container is running'
             }
